@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+    <link rel="stylesheet" href="./styles/styleBase/reset.css">
+</head>
+<body>
+    <main>
+        <nav>
+            <div id="hamburguer" class="active">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>         
+            </div>
+            <a href="#paralogin">Login</a>
+            <a href="#paracadastro">Cadastre-se</a>
+        </nav>
+        <section id="navegador" class="filters">
+            <div class="filtersContainer">
+                <button id="todas">Todas</button>
+                <button id="alimenticio">Alimenticio</button>
+                <button id="automotiva">Automotiva</button>
+                <button id="ti">TI</button>
+            </div>
+        </section>
+        <section>
+            <h1>Company Search</h1>
+            <h2>Onde grandes empreendedores e colaboradores encontram todas as informações que procuram!</h2>
+        </section>
+    </main>
+
+    <div class="container">
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+
+        <div class="content">
+            <div id="login">
+                <form method="post"> 
+                    <h1>Login</h1> 
+                    <p>
+                        <input id="email_login" type="email" placeholder="Digite seu e-mail" /> 
+                    </p>
+                    
+                    <p>
+                        <input id="pass_login" type="password" placeholder="Digite sua senha"/>
+                    </p>
+                <p> 
+                    <button id="logar">Logar</button>
+                </p>
+                
+                </form>
+            </div>
+
+
+            <div id="cadastro">
+                <form method="post"> 
+                    <h1>Cadastro</h1> 
+                
+                <p>
+                    <input id="nome_cad" type="text" placeholder="Digite seu nome" />
+                </p>
+                
+                <p>
+                    <input id="email_cad" type="email" placeholder="Digite seu e-mail"/> 
+                </p>
+
+                <p>
+                    <input id="nivel_cad" type="text" placeholder="Seu nível profissional"/> 
+                </p>
+                
+                <p>
+                    <input id="senha_cad" type="password" placeholder="Digite sua senha"/>
+                </p>
+                
+                <p> 
+                    <button id="cadastrar">Cadastrar</button>
+                </p>
+                
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div>
+            <div>
+                <h2>Nome</h2>
+                <p>horário</p>
+            </div>
+            <div>
+                <h3>Descrição aaaaaaa</h3>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./script/homePage/signup.js"></script>
+</body>
+</html>
