@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
+    rel="stylesheet"> 
+
     <link rel="stylesheet" href="./styles/styleBase/reset.css">
+    <link rel="stylesheet" href="./styles/styleBase/variaveis.css">
+    <link rel="stylesheet" href="./styles/homePage/homePage.css">
+    <link rel="stylesheet" href="./styles/homePage/login.css">
+    <link rel="stylesheet" href="./styles/homePage/cadastro.css">
 </head>
 <body>
     <main>
@@ -19,19 +28,20 @@
             <a href="#paralogin">Login</a>
             <a href="#paracadastro">Cadastre-se</a>
         </nav>
-        <section id="navegador" class="filters">
+        <section id="navegador" class="filters hidden">
             <div class="filtersContainer">
-                <button id="todas">Todas</button>
+                <!--<button id="todas">Todas</button>
                 <button id="alimenticio">Alimenticio</button>
                 <button id="automotiva">Automotiva</button>
-                <button id="ti">TI</button>
+                <button id="ti">TI</button>-->
             </div>
         </section>
-        <section>
-            <h1>Company Search</h1>
-            <h2>Onde grandes empreendedores e colaboradores encontram todas as informações que procuram!</h2>
-        </section>
     </main>
+    
+    <section class="centro">
+        <h1>Company Search</h1>
+        <h2>Onde grandes empreendedores e colaboradores encontram todas as informações que procuram!</h2>
+    </section>
 
     <div class="container">
         <a class="links" id="paracadastro"></a>
@@ -86,8 +96,8 @@
         </div>
     </div>
 
-    <section>
-        <div>
+    <section class="sectionEmpresas">
+        <!--<div class="empresas">
             <div>
                 <h2>Nome</h2>
                 <p>horário</p>
@@ -95,9 +105,10 @@
             <div>
                 <h3>Descrição aaaaaaa</h3>
             </div>
-        </div>
+        </div>-->
     </section>
 
     <script type="module" src="./script/homePage/signup.js"></script>
+    <script type="module" src="./script/homePage/listar.js"></script>
 </body>
 </html>

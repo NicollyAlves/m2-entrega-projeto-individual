@@ -27,9 +27,9 @@ export class ApiHomepage {
                 localStorage.setItem("@empresas:is_admin", res.is_admin)
             }
             
-            if(!this.token) {
+            /*if(!this.token) {
                 window.location.assign("../../homePage.html")
-            }
+            }*/
             
             if(res.is_admin == false) {
                 window.location.assign("../../pages/dashBNormal.html")
@@ -64,8 +64,105 @@ export class ApiHomepage {
             headers: this.headers
         })
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(res => res)
+        .catch(err => console.log(err))
 
         return empresas
     }
+
+    static async getEmpSetor1() {
+        const setores = await fetch(`${this.baseUrl}companies/Alimenticio`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return setores
+    }
+
+    static async getEmpSetor2() {
+        const setores = await fetch(`${this.baseUrl}companies/Varejo`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return setores
+    }
+
+    static async getEmpSetor3() {
+        const setores = await fetch(`${this.baseUrl}companies/Textil`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return setores
+    }
+
+    static async getEmpSetor4() {
+        const setores = await fetch(`${this.baseUrl}companies/Manufatura`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return setores
+    }
+
+    static async getEmpSetor5() {
+        const setores = await fetch(`${this.baseUrl}companies/Aeroespacial`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+        
+        return setores
+    }
+    
+    static async getEmpSetor6() {
+        const setores = await fetch(`${this.baseUrl}companies/Automotiva`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return setores
+    }
+    static async getEmpSetor7() {
+        const setores = await fetch(`${this.baseUrl}companies/TI`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return setores
+    }
+
+    static async getEmpSetor8() {
+        const setores = await fetch(`${this.baseUrl}companies/Atacado`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return setores
+    }
+
 }

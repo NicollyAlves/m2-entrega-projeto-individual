@@ -28,6 +28,9 @@ class SignUp {
         const userId = localStorage.getItem("@empresas:uuid")
         const is_admin = localStorage.getItem("@empresas:is_admin")
 
+        if(token && userId &&  is_admin == true) {
+            window.location.assign("../../pages/dashBAdmin.html")
+        }
         /*if(is_admin == true) {
             window.location.assign("../../pages/dashBAdmin.html")
         } else if(is_admin == false) {
