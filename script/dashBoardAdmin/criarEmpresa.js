@@ -2,6 +2,11 @@ import { ApiDep } from "../API/Admin/departamento.js";
 import { ApiEmpresa } from "../API/Admin/empresa.js";
 import { RenderAdmin } from "./renderAdmin.js";
 
+const token = localStorage.getItem("@empresas:token")
+if(!token) {
+    window.location.assign("/homePage.html")
+}
+
 export class CriarEmpresa {
     static criar() {
         const nome = document.getElementById("nomeEmp")

@@ -1,7 +1,12 @@
 import { ApiEmpresa } from "../API/Admin/empresa.js";
 import { ApiSetor } from "../API/Admin/setor.js";
 import { RenderAdmin } from "./renderAdmin.js";
-import { ApiDep } from "../API/Admin/departamento.js";
+import { ApiFuncion } from "../API/Admin/funcionario.js";
+
+const token = localStorage.getItem("@empresas:token")
+if(!token) {
+    window.location.assign("/homePage.html")
+}
 
 export class ListarSetor {
     static async renderSetor() {
@@ -12,20 +17,20 @@ export class ListarSetor {
         const empresas = await ApiEmpresa.getEmpresas()
         RenderAdmin.renderCriarEmpresa(empresas)
     }
-    static async renderDep() {
+    /*static async renderDep() {
         const departamento = await ApiDep.getDepartamentos()
         RenderAdmin.loopDep(departamento)
-    }
+    }*/
 
-    static async update() {
-        const dep = await ApiDep.editarDep()
-        RenderAdmin.updateDep(dep)
+    static async renderFuncionSemDep() {
+        const funcio = await ApiFuncion.funcioSemDep()
+        RenderAdmin.renderFuncioSemDep(funcio)
     }
-    
 }
 ListarSetor.renderSetor()
 ListarSetor.renderEmpresa()
-ListarSetor.renderDep()
+ListarSetor.renderFuncionSemDep()
+//ListarSetor.renderDep()
 
 
 

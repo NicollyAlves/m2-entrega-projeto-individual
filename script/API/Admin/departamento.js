@@ -31,6 +31,18 @@ export class ApiDep {
         return departamento
     }
 
+    static async depEmpresaEspecifica(uuid) {
+        const departamento = await fetch(`${this.baseUrl}departments/${uuid}`, {
+            method: "GET", 
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return departamento
+    }
+
     static async editarDep(data, uuid) {
         const departamento = await fetch(`${this.baseUrl}departments/${uuid}`, {
             method: "PATCH", 
@@ -38,6 +50,17 @@ export class ApiDep {
             body: JSON.stringify(data)
         })
         .then(res => res.json())
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+
+        return departamento
+    }
+
+    static async deleteDep(uuid) {
+        const departamento = await fetch(`${this.baseUrl}departments/${uuid}`, {
+            method: "DELETE", 
+            headers: this.headers
+        })
         .then(res => res)
         .catch(err => console.log(err))
 

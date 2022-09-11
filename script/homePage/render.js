@@ -1,7 +1,9 @@
 import { Renderiza } from "./listar.js"
+import {ShowModal} from "./modais.js"
 
 const filtersContainer = document.querySelector(".filtersContainer")
 const sectionEmpresas = document.querySelector(".sectionEmpresas")
+const abrir = document.getElementById("hamburguer")
 export class HomePage {
     static renderButtons() {
         const button  = document.createElement("button")
@@ -27,46 +29,64 @@ export class HomePage {
         button.addEventListener("click", () => {
             Renderiza.listarTodas()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button1.addEventListener("click", () => {
             Renderiza.listar1()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button2.addEventListener("click", () => {
             Renderiza.listar2()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button3.addEventListener("click", () => {
             Renderiza.listar3()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button4.addEventListener("click", () => {
             Renderiza.listar4()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button5.addEventListener("click", () => {
             Renderiza.listar5()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button6.addEventListener("click", () => {
             Renderiza.listar6()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button7.addEventListener("click", () => {
             Renderiza.listar7()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         button8.addEventListener("click", () => {
             Renderiza.listar8()
             sectionEmpresas.innerHTML = ""
+            ShowModal.showMinWidth()
+            abrir.classList.toggle("active")
         })
 
         filtersContainer.append(button, button1, button2, button3, button4, button5, button6, button7, button8)
@@ -85,6 +105,8 @@ export class HomePage {
             const setor = document.createElement("h4")
 
             empresas.classList.add('empresas')
+            info.classList.add("infos")
+            infoDesc.classList.add("infoDesc")
             empresas.id = data[i].uuid
 
             nome.innerText = data[i].name
@@ -94,8 +116,8 @@ export class HomePage {
             
 
             info.append(nome, horario)
-            infoDesc.append(descricao)
-            empresas.append(info, infoDesc, setor) 
+            infoDesc.append(descricao, setor)
+            empresas.append(info, infoDesc) 
             sectionEmpresas.appendChild(empresas)
         }
         return sectionEmpresas

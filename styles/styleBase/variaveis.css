@@ -1,12 +1,15 @@
 :root {
-    --rosa_princ: #FFC78D;
-    --rosa1: #FFECD8;
-    --rosa2: #FFD9B3;
-    --rosa3: #EFAA64;
-    --rosa4: #CD853C;
-    --bege_princ: #FFD38D;
-    --bege1: #FFF0D8;
-    --bege2: #FFE1B3;
-    --bege3: #EFB964;
-    --bege4: #CD943C;
+    --base_princ: #ffffff;
+    --base1: #dddddd;
+    --base2: #b2b3b4;
+    --base3: #7c7c7c;
+    --base4: #d3dcfa;
+    --sec_princ: #534863;
+    --sec1: #eae8fa;
+    --sec2: #302752;
+    --sec3: #231c2c;
+    --sec4: #220049;
+    --font1: "Inter:wght@700", sans-serif;
+    --font2: "Inter:wght@600", sans-serif;
+    --font3: "Inter:wght@400", sans-serif;
 }

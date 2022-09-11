@@ -59,28 +59,39 @@ export class RenderAdmin{
             const horario = document.createElement("p")
             const infoDesc = document.createElement("div")
             const descricao = document.createElement("h3")
+            const ramo = document.createElement("h4")
             const details = document.createElement("details")
             const summary = document.createElement("summary")
             const h3 = document.createElement("h3")
+            const button = document.createElement("button")
             
             empresas.classList.add("empresas")
             details.classList.add("detalhes")
             
-            /*btnEditar.addEventListener("click",  async (event) => {
-                localStorage.setItem('@empresas:itemId', event.target.uuid)
-            })*/
-            
-            
+
             nome.innerText = data[i].name
             horario.innerText = data[i].opening_hours
             descricao.innerText = data[i].description
+            ramo.innerText = data[i].sectors.description
             summary.innerText = "Clique para obter o id da empresa"
             h3.innerText = data[i].uuid
+            button.id = data[i].uuid
+            button.innerText = "departamentos"
+
+            button.addEventListener("click", async (event) => {
+                const uuid = event.target.id
+                const dep = await ApiDep.depEmpresaEspecifica(uuid)
+                console.log(dep);
+                const departamento = await ApiDep.getDepartamentos()
+                RenderAdmin.renderDepartCriado(dep)
+                //window.location.reload(true)
+            })
+
             
             details.append(summary, h3)
-            info.append(nome, horario)
+            info.append(nome, ramo, horario)
             infoDesc.append(descricao)
-            empresas.append(info, infoDesc, details)
+            empresas.append(info, infoDesc, details, button)
             
             section.appendChild(empresas)
         }
@@ -113,58 +124,127 @@ export class RenderAdmin{
         button.id = "criarDep"
         
         form.append(label, nome, descricao, uuid, button)
-        if(button) {
-            button.addEventListener("click", async (event) => { 
-                localStorage.setItem('@empresas:itemId', event.target.itemId)
-            })
-        }
         return form
     }
     
-    static loopDep(data) {
-        data.forEach((elem) => {
-            this.renderDepartCriado(elem)
-        })
+    /*static loopDep(data) {
+        for(let i = 0; i<data[i].length; i++){
+            this.renderDepartCriado(data)
+        }
     }
-    
+    */
     static renderDepartCriado(data) {
-        const divDep = document.querySelector(".departamento")
-        const div = document.createElement("div")
-        const nome = document.createElement("h2")
-        const desc = document.createElement("p")
-        const btnEditar = document.createElement("button")
-        const btnDelete = document.createElement("button")
-        
-        btnEditar.id = "editar"
-        btnDelete.id = "deletar"
-        btnEditar.innerText = "editar"
-        btnDelete.innerText = "deletar"
-        
-        div.classList.add("listaDep")
-        
-        btnEditar.addEventListener("click", async (event) => {
-            event.preventDefault()
-            console.log("OI");
-            const nome = document.getElementById("nomeDep")
-            const dec = document.getElementById("descDep")
-            const updateId = localStorage.getItem('@empresas:itemId')
-            const data = {
-                description: dec.value
-            }
+        for(let i = 0; i<data.length; i++) {
             
-            await ApiDep.editarDep(data, updateId)
-            //localStorage.removeItem("@empresas:itemId")
-        })
+            const divDep = document.querySelector(".departamento")
+            const div = document.createElement("div")
+            const nome = document.createElement("h2")
+            const desc = document.createElement("p")
+            const btnEditar = document.createElement("button")
+            const btnDelete = document.createElement("button")
+            const details = document.createElement("details")
+            const summary = document.createElement("summary")
+            const h3 = document.createElement("h3")
+            
+            btnEditar.id = data[i].uuid
+            btnDelete.id = data[i].uuid
+            btnEditar.innerText = "editar"
+            btnDelete.innerText = "deletar"
+            summary.innerText = "Clique para obter o id do departamento"
+            h3.innerText = data[i].uuid
+            
+            div.classList.add("listaDep")
+            
+            btnEditar.addEventListener("click", async (event) => {
         
-        nome.innerText = data.name
-        desc.innerText = data.description
+                const dec = document.getElementById("descDep")
+                const updateId = event.target.id
+                const data = {
+                    description: dec.value
+                }
+                
+                await ApiDep.editarDep(data, updateId)
+                document.location.reload(true)
+            })
+            
+            btnDelete.addEventListener("click", async (event) => {
+                const deleteId = event.target.id
+                await ApiDep.deleteDep(deleteId)
+                document.location.reload(true)
+            })
         
-        div.append(nome, desc, btnEditar, btnDelete)
-        divDep.append(div)
-        return divDep
+            nome.innerText = data[i].name
+            desc.innerText = data[i].description
+            
+            details.append(summary, h3)
+            div.append(nome, desc, btnEditar, btnDelete)
+            divDep.append(div, details)
+            //return divDep
+        }
+    }
+
+    static renderHireInputs() {
+        const div = document.querySelector(".hireInputs")
+        const form = document.createElement("form")
+        const label = document.createElement("label")
+        const idFuncio = document.createElement("input")
+        const idDep = document.createElement("input")
+
+        label.innerText = "Contratar Funcionário"
+        idFuncio.type = "text"
+        idDep.type = "text"
+
+        idFuncio.placeholder = "Digite o id do usuário"
+        idDep.placeholder = "Digite o id do departamento"
+
+        form.append(label, idFuncio, idDep)
+        div.appendChild(form)
+
+        return div
+    }
+
+
+    static renderFuncioSemDep(data) {
+        const section = document.querySelector(".funcioSemDep")
+        for(let i = 0; i<data.length; i++) {
+            
+            const empresas = document.createElement("div")
+            const info = document.createElement("div")
+            const nome = document.createElement("h2")
+            const email = document.createElement("p")
+            const infoDesc = document.createElement("div")
+            const nivel = document.createElement("h3")
+            const kind = document.createElement("h4")
+            const details = document.createElement("details")
+            const summary = document.createElement("summary")
+            const h3 = document.createElement("h3")
+            const button = document.createElement("button")
+            
+            empresas.classList.add("empresas")
+            details.classList.add("detalhes")
+            
+    
+            nome.innerText =  data[i].username
+            email.innerText = data[i].email
+            nivel.innerText = data[i].professional_level
+            kind.innerText =  data[i].kind_of_work
+            summary.innerText = "Clique para obter o id do usuário"
+            h3.innerText = data[i].uuid
+            button.id = data[i].uuid
+            button.innerText = "contratar"
+    
+            
+            details.append(summary, h3)
+            info.append(nome, email, nivel)
+            infoDesc.append(kind)
+            empresas.append(info, infoDesc, details, button)
+            
+            section.appendChild(empresas)
+        }
     }
 }
 
 RenderAdmin.renderInputCriarEmpresa()
 RenderAdmin.renderInputCriarDep()
+RenderAdmin.renderHireInputs()
 //RenderAdmin.updateDep()

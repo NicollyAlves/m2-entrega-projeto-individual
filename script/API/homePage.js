@@ -1,3 +1,5 @@
+import { ModalErro } from "../homePage/modalErro.js"
+
 export class ApiHomepage {
 
     static baseUrl = "http://localhost:6278/"
@@ -27,6 +29,11 @@ export class ApiHomepage {
                 localStorage.setItem("@empresas:is_admin", res.is_admin)
             }
             
+            if(res.error){
+                const abrir = ModalErro.showToast()
+                const fechar = ModalErro.closeToast()
+                return abrir, fechar
+            }
             /*if(!this.token) {
                 window.location.assign("../../homePage.html")
             }*/
@@ -41,7 +48,7 @@ export class ApiHomepage {
             console.log(res);
             return res
         })
-        .catch(err => err)
+        .catch(err => console.log(err))
         return userLogin
     }
 

@@ -1,0 +1,82 @@
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    justify-content: center;
+}
+
+
+.formLogin {
+    top: 20%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--base4);
+    border-radius: 8px;
+    padding: 24px;
+    width: 80%;
+    max-width: 380px;
+    height: 200px;
+}
+
+.formLogin > h1 {
+    font-family: var(--font1);
+    font-size: 22px;
+    margin-top: 10px;
+    color: var(--base3);
+    font-weight: 700;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+input {
+    margin-top: 20px;
+    border: 1px solid var(--sec1);
+    height: 30px;
+    padding: 8px;
+    background-color: var(--sec1);
+    border-radius: 4px;
+    color: var(--base2);
+    
+}
+
+#logar {
+    height: 30px;
+    padding: 6px;
+    background-color: var(--base2);
+    border-radius: 4px;
+    color: var(--sec2);
+    margin-top: 25px;
+    font-family: var(--font3);
+    font-size: 14px;
+    border: solid 1px var(--sec2);
+}
+
+.formLogin > p {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: var(--text3);
+    font-size: var(--text3_size);
+    font-weight: var(--text3_height);
+}
+
+
+.hidden {
+    display: none;
+}
+
+
