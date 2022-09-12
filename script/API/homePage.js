@@ -35,9 +35,6 @@ export class ApiHomepage {
                 const fechar = ModalErro.closeToast()
                 return abrir, fechar
             }
-            /*if(!this.token) {
-                window.location.assign("../../homePage.html")
-            }*/
             
             if(res.is_admin == false) {
                 window.location.assign("../../pages/dashBNormal.html")

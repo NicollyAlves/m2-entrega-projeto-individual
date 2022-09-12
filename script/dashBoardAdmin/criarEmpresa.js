@@ -4,7 +4,7 @@ import { RenderAdmin } from "./renderAdmin.js";
 
 const token = localStorage.getItem("@empresas:token")
 if(!token) {
-    window.location.assign("/homePage.html")
+    window.location.assign("/index.html")
 }
 
 export class CriarEmpresa {

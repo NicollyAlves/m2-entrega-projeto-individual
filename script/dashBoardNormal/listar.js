@@ -3,7 +3,7 @@ import { RenderNormal } from "./renderNormal.js";
 
 const user = localStorage.getItem("@empresas:is_admin")
 if(user != false) {
-    window.location.assign("/homePage.html")
+    window.location.assign("/index.html")
 }
 
 export class ListarNormal {

@@ -31,18 +31,6 @@ class SignUp {
         if(token && userId &&  is_admin == true) {
             window.location.assign("../../pages/dashBAdmin.html")
         }
-        /*if(is_admin == true) {
-            window.location.assign("../../pages/dashBAdmin.html")
-        } else if(is_admin == false) {
-            window.location.assign("../../pages/dashBNormal.html")
-        } else {
-            window.location.assign("../../homePage.html")
-        }*/
-        /*if(token != undefined && userId != undefined && is_admin == false) {
-            window.location.assign("../../pages/dashBNormal.html")
-        } else if(token != undefined && userId != undefined && is_admin == true) {
-            window.location.assign("../../pages/dashBAdmin.html")
-        }*/
 
         const emailLogin = document.getElementById("email_login")
         const passLogin = document.getElementById("pass_login")
