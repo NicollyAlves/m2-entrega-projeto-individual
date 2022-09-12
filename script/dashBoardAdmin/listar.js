@@ -4,8 +4,8 @@ import { RenderAdmin } from "./renderAdmin.js";
 import { ApiFuncion } from "../API/Admin/funcionario.js";
 
 
-const admin = localStorage.getItem("@empresas:is_admin")
-if(admin != true) {
+const token = localStorage.getItem("@empresas:token")
+if(!token) {
     window.location.assign("/index.html")
 }
 
