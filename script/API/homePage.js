@@ -1,3 +1,4 @@
+import { ModalAcerto } from "../homePage/modalAcerto.js"
 import { ModalErro } from "../homePage/modalErro.js"
 
 export class ApiHomepage {
@@ -59,7 +60,16 @@ export class ApiHomepage {
             body: JSON.stringify(body)
         })
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(res => {
+            if(!res.error) {
+                const abrir = ModalAcerto.showToast()
+                const fechar = ModalAcerto.closeToast()
+                return abrir, fechar
+            }
+
+            console.log(res);
+            return res
+        })
         .catch(err => console.log(err))
 
         return user

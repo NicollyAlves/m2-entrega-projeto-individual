@@ -40,7 +40,12 @@ main > section {
     background-color: var(--sec1);
     color: var(--sec3);
     cursor: pointer;
+    font-weight: 600;
 }
+
+#login:hover, #cadastro:hover {
+    color: var(--base3);
+} 
 
 #hamburguer {
     display: block;
@@ -110,6 +115,12 @@ main > section {
     justify-content: flex-start;
     opacity: 0.9;
     cursor: pointer;
+    border-left: 3px solid var(--sec3);
+    border-radius: 0 5px 5px 0;
+}
+
+.filtersContainer > button:hover {
+    background-color: var(--base2);
 }
 
 .centro {

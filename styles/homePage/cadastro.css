@@ -57,6 +57,7 @@ input {
     font-family: var(--font3);
     font-size: 14px;
     border: solid 1px var(--sec2);
+    cursor: pointer;
 }
 
 .hidd {

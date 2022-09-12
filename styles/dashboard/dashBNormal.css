@@ -1,0 +1,174 @@
+nav {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-weight: 700;
+    background-color: var(--sec1);
+    font-family: var(--font3);
+    color: var(--sec3);
+    border-bottom: 1px solid var(--sec3);
+    margin-bottom: 20px;
+}
+
+nav > .princip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--font3);
+    color: var(--base1);
+    text-shadow: 1px 1px 1px var(--sec3);
+}
+
+nav > .descriptionCompany {
+    font-size: large;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    line-height: 20px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--font3);
+    margin-left: 20px;
+    color: var(--sec1);
+    text-shadow: 1px 1px 1px var(--sec3);
+}
+
+.ownDep {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 360px;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    background-color: var(--sec3);
+    margin-left: 10px;
+    border-radius: 7px 7px 0 0;
+    color: var(--base2);
+    font-family: var(--font3);
+    font-size: medium;
+    border-bottom: 2px solid var(--sec1);
+}
+
+.infoFuncio {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 360px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    background-color: var(--sec3);
+    margin: 0px 10px 0px 10px;
+    border-radius: 0 0 7px 7px;
+    color: var(--base2);
+    font-family: var(--font3);
+    font-size: medium;
+    font-weight: 700;
+    line-height: 25px;
+    overflow: auto;
+}
+
+.editar {
+    color: var(--sec3);
+    background-color: var(--base2);
+    border-radius: 5px;
+    font-family: var(--font3);
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    
+}
+
+.inputsEditar {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 260px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    background-color: var(--sec3);
+    margin-left: 10px;
+    border-radius: 7px;
+    color: var(--base2);
+    font-family: var(--font3);
+    font-size: medium;
+    font-weight: 700;
+    line-height: 25px;
+    overflow: auto;
+    margin-top: 10px;
+    height: 110px;
+    width: 80%;
+    max-width: 360px;
+}
+
+.inputsEditar > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    width: 90%;
+    background-color: var(--sec1);
+    color: var(--sec3);
+    border: none;
+    height: 25px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+}
+
+.titulo {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+    color: var(--sec3);
+    font-weight: 700;
+    font-family: var(--font1);
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.listaFuncio {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--base_princ);
+    margin-top: 10px;
+    width: 80%;
+    font-family: var(--font3);
+    font-weight: 600;
+    color: var(--sec2);
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px var(--base3);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (min-width:768px){
+    .titulo {
+        display: flex;
+        position: absolute;
+        top: 75px;
+        left: 27%;
+    }
+
+    .listaFuncio {
+        display:flex;
+        position: relative;
+        flex-wrap: wrap;
+        top: 200px;
+        width: 35%;
+        right: -430px;
+        margin-top: -170px;
+    }
+}

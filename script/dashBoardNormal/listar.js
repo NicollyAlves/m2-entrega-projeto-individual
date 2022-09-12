@@ -1,8 +1,8 @@
 import { ApiNormal } from "../API/normal.js";
 import { RenderNormal } from "./renderNormal.js";
 
-const token = localStorage.getItem("@empresas:token")
-if(!token) {
+const user = localStorage.getItem("@empresas:is_admin")
+if(user != false) {
     window.location.assign("/homePage.html")
 }
 

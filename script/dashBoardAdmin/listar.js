@@ -3,8 +3,9 @@ import { ApiSetor } from "../API/Admin/setor.js";
 import { RenderAdmin } from "./renderAdmin.js";
 import { ApiFuncion } from "../API/Admin/funcionario.js";
 
-const token = localStorage.getItem("@empresas:token")
-if(!token) {
+
+const admin = localStorage.getItem("@empresas:is_admin")
+if(admin != true) {
     window.location.assign("/homePage.html")
 }
 
@@ -26,9 +27,11 @@ export class ListarSetor {
         const funcio = await ApiFuncion.funcioSemDep()
         RenderAdmin.renderFuncioSemDep(funcio)
     }
+
+
 }
 ListarSetor.renderSetor()
-ListarSetor.renderEmpresa()
+//ListarSetor.renderEmpresa()
 ListarSetor.renderFuncionSemDep()
 //ListarSetor.renderDep()
 

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard Admin</title>
+
+    <link rel="stylesheet" href="../styles/styleBase/reset.css">
+    <link rel="stylesheet" href="../styles/styleBase/variaveis.css">
+    <link rel="stylesheet" href="../styles/dashboard/dashBAdmin.css">
 </head>
 <body>
     <!--
@@ -28,34 +32,27 @@
         MOSTRAR DESCRICAO DO DEPARTAMENTO
         LISTAR TODOS OS USUARIOS NORMAIS QUE ESTÃO CADASTRADOS NA APLICAÇAO MA QUE N FORAM CONTRATADOS
     -->
+    <nav>
+        
+    </nav>
 
     <section>
         <div>
             <div>
-                <h2>Aqui estão todos os setores:</h2>
+                <h2 class="tituloSetores">Todos os setores:</h2>
             </div>
             <ul class="listaSetores">
                 <!--<li>descricao</li>
-                <details>
+                    <details>
                     <summary>abre</summary>
                     <h3>oii</h3>
                 </details>-->
             </ul>
         </div>
     </section>
-
-    <form class="inputsCriarEmpresa">
-        <!--<input id="nomeEmp" type="text" placeholder="Nome">
-        <input id="timeEmp" type="text" placeholder="Horário de abertura">
-        <input id="descEmp" type="text" placeholder="Descrição">
-        <input id="idEmp" type="text" placeholder="ID do setor">
-        <button id="criarEmpresa">Criar Empresa</button>
-    -->
-    </form>
-
     
+    <h3 class="company">Empresas criadas:</h3>
     <section class="sectionEmpresas">
-        <h3>Empresas criadas:</h3>
         <!--<div class="empresas">
                 <div>
                     <h2>Nome</h2>
@@ -70,24 +67,49 @@
                 </details>-->
             </div>
         </section>
-        
-        <form class="inputsCriarDep">
+    <form class="inputsCriarEmpresa">
+
+        <!--<input id="nomeEmp" type="text" placeholder="Nome">
+        <input id="timeEmp" type="text" placeholder="Horário de abertura">
+        <input id="descEmp" type="text" placeholder="Descrição">
+        <input id="idEmp" type="text" placeholder="ID do setor">
+        <button id="criarEmpresa">Criar Empresa</button>
+    -->
+    </form>
+
+    
+
+    
+    <form class="inputsCriarDep">
         <!--
             <input id="nomeDep" type="text" placeholder="Nome">
             <input id="descDep" type="text" placeholder="Descrição">
             <input id="idDep" type="text" placeholder="ID da empresa">
             <button id="criarDep">Criar Departamento</button>
         -->
+    </form>
+
+    <div class="inputsEditDep">
+        <form class="editdep">
+            <label>Editar Departamento</label>
+            <input id="editDesc" type="text" placeholder="Digite uma nova descrição">
         </form>
+    </div>
+    
+    
+    <h3 class="tituloDepartamentos">Departamentos</h3>
+    
+    <div class="departamento">
+        <!--<div class="listaDep">
+            <h2>nome</h2>
+            <p>descricao</p>
+        </div>-->
+    </div>
 
+        <section class="allUsers">
 
-        <div class="departamento">
-            <!--<div class="listaDep">
-                <h2>nome</h2>
-                <p>descricao</p>
-            </div>-->
-        </div>
-
+        </section>
+        
         <div class="hireInputs">
             <!--<form>
                 <label>Contratar Funcionário</label>
@@ -95,11 +117,15 @@
                 <input type="text" placeholder="Digite o id do departamento">
             </form>-->
         </div>
-
-
+        
+        <div class="dismissInputs">
+            
+        </div>
+        
         <section class="funcioSemDep">
 
         </section>
+        
     <script type="module" src="../script/dashBoardAdmin/criarEmpresa.js"></script>
     <script type="module" src="../script/dashBoardAdmin/listar.js"></script>
 </body>

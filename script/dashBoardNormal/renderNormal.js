@@ -10,6 +10,7 @@ export class RenderNormal {
         const textDesc = document.createElement("h3")
         
         description.classList.add("descriptionCompany")
+        princ.classList.add("princip")
 
         nome.innerText = data.name
         horario.innerText = data.opening_hours
@@ -40,7 +41,10 @@ export class RenderNormal {
         const nome = document.createElement("input")
         const email = document.createElement("input")
         const pass = document.createElement("input")
-        const salvar = document.createElement("button")
+
+        nome.classList.add("input")
+        email.classList.add("input")
+        pass.classList.add("input")
 
         nome.id = "nomeEditar"
         email.id = "emailEditar"
@@ -53,9 +57,8 @@ export class RenderNormal {
         nome.placeholder = "Digite um novo nome"
         email.placeholder = "Digite um novo e-mail"
         pass.placeholder = "Digite uma nova senha"
-        salvar.innerText = "Salvar"
 
-        form.append(nome, email, pass, salvar)
+        form.append(nome, email, pass)
         div.appendChild(form)
 
         return div
@@ -72,9 +75,11 @@ export class RenderNormal {
             const divEmail = document.createElement("div")
             const email = document.createElement("h3")
 
-            nome.innerText = data[0].users[i].username
-            nivel.innerText = data[0].users[i].professional_level
-            email.innerText = data[0].users[i].email
+            lista.classList.add("listaFuncio")
+
+            nome.innerText = `Nome: ${data[0].users[i].username}`
+            nivel.innerText = `Nível profissional: ${data[0].users[i].professional_level}`
+            email.innerText = `Email: ${data[0].users[i].email}`
 
             divEmail.append(email)
             infos.append(nome, nivel)
@@ -92,6 +97,8 @@ export class RenderNormal {
         const email = document.createElement("h3")
         const nivel = document.createElement("h3")
         const button = document.createElement("button")
+
+        button.classList.add("editar")
 
         nome.innerText = `Nome: ${data.username}`
         email.innerText = `Email: ${data.email}`
@@ -112,7 +119,7 @@ export class RenderNormal {
             }
 
             await ApiNormal.editarInfos(data)
-            //document.location.reload(true)
+            window.location.reload(true)
         })
 
         div.append(nome, email, nivel, button)

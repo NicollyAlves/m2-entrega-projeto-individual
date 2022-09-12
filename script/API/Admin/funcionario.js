@@ -6,6 +6,19 @@ export class ApiFuncion {
         Authorization: `Bearer ${this.token}`
     }
 
+    static async allUsers() {
+        const funcionario = await fetch(`${this.baseUrl}users`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return funcionario
+    }
+
+
     static async funcioSemDep() {
         const funcionario = await fetch(`${this.baseUrl}admin/out_of_work`, {
             method: "GET",
@@ -32,12 +45,12 @@ export class ApiFuncion {
     }
 
     static async dismissFuncio(uuid) {
-        const funcionario = await fetch(`${this.baseUrl}/departments/dismiss/${uuid}`, {
+        const funcionario = await fetch(`${this.baseUrl}departments/dismiss/${uuid}`, {
             method: "PATCH",
             headers: this.headers
         })
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(res => res)
         .catch(err => console.log(err))
 
         return funcionario

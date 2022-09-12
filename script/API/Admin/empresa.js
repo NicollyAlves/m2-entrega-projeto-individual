@@ -18,6 +18,18 @@ export class ApiEmpresa {
         return empresas
     }
 
+    static async getEmpresasporSetor(id) {
+        const empresas = await fetch(`${this.baseUrl}companies/${id}`, {
+            method: "GET",
+            headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+
+        return empresas
+    }
+
     static async criarEmpresa(body) {
         const empresa = await fetch(`${this.baseUrl}companies`, {
             method: "POST", 

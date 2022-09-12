@@ -1,0 +1,439 @@
+
+
+main, section{
+    padding: 10px;
+}
+
+nav {
+    background-color: var(--base2);
+    height: 50px;
+}
+
+summary{
+    list-style-type: '+';
+    
+}
+
+details[open] summary{
+    list-style-type: '-';
+}
+
+.tituloSetores {
+    font-family: var(--font1);
+    font-weight: 600;
+    color: var(--sec4);
+}
+
+.listaSetores {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    height: max-content;
+    margin-top: 15px;
+}
+
+.listaSetores > div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: var(--base1);
+    border: 1px solid var(--sec4);
+    border-radius: 7px;
+    font-family: var(--font3);
+    font-size: small;
+    box-shadow: 2px 2px 3px var(--base2);
+}
+
+.nomeSetor {
+    display: flex;
+    font-family: var(--font3);
+    font-size: medium;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--base3);
+    margin-bottom: 4px;
+}
+
+.btnEmpresas {
+    background-color: var(--sec4);
+    border: none;
+    border: 1px solid var(--base_princ);
+    color: var(--base_princ);
+    padding: 4px;
+    border-radius: 6px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.inputsCriarEmpresa {
+    flex-direction: column;
+    display: flex;
+    margin-top: 10px;
+    border-top: 2px solid var(--base3);
+    border-bottom: 2px solid var(--base3);
+    margin-bottom: 10px;
+}
+
+.divEmpresas {
+    flex-direction: column;
+    display: flex;
+}
+
+.inputCreateCompany {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    color: var(--sec3);
+    background-color: var(--base1);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.btnCriarEmpresa {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    color: var(--sec3);
+    background-color: var(--base2);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputsCriarDep {
+    flex-direction: column;
+    display: flex;
+    margin-top: 10px;
+    border-bottom: 2px solid var(--base3);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.departments {
+    flex-direction: column;
+    display: flex;
+}
+
+.inputsCreateDep {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    color: var(--sec3);
+    background-color: var(--base1);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.btnCriarDep {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    color: var(--sec3);
+    background-color: var(--base2);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.editdep {
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    border-bottom: 2px solid var(--base3);
+    margin-bottom: 15px;
+}
+
+.editdep > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font1);
+    font-weight: 600;
+    color: var(--sec3);
+    margin-bottom: 6px;
+}
+
+.editdep > input {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    color: var(--sec3);
+    background-color: var(--base1);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.tituloDepartamentos {
+    font-family: var(--font1);
+    font-weight: 600;
+    color: var(--sec4);
+    margin-left: 10px;
+}
+
+.departamento {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    height: max-content;
+    margin-top: 15px;
+}
+
+.divDepart {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: var(--base1);
+    border: 1px solid var(--sec4);
+    border-radius: 7px;
+    font-family: var(--font3);
+    font-size: small;
+    box-shadow: 2px 2px 3px var(--base2);
+}
+
+.btnDepartment {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    padding: 6px;
+    margin-top: 3px;
+    color: var(--sec3);
+    background-color: var(--base2);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomeDepart {
+    display: flex;
+    font-family: var(--font3);
+    font-size: medium;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--base3);
+    margin-bottom: 4px;
+}
+
+.listaSetores > li {
+    display: flex;
+}
+
+.company {
+    padding: 10px;
+}
+
+.listaSetores > details {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputsCriarEmpresa {
+    padding: 10px;
+}
+
+.sectionEmpresas {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    height: max-content;
+    margin-top: 15px;
+    padding: 10px;
+    
+}
+
+.company {
+    font-family: var(--font1);
+    font-weight: 600;
+    color: var(--sec4);
+    margin-bottom: -15px;
+}
+
+.empresas {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    background-color: var(--base1);
+    border: 1px solid var(--sec4);
+    border-radius: 7px;
+    font-family: var(--font3);
+    font-size: small;
+    box-shadow: 2px 2px 3px var(--base2);
+    padding: 10px;
+}
+
+.nomeDep {
+    display: flex;
+    font-family: var(--font3);
+    font-size: medium;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--base3);
+    margin-bottom: 4px;
+}
+
+.btnDepart {
+    background-color: var(--sec4);
+    border: none;
+    border: 1px solid var(--base_princ);
+    color: var(--base_princ);
+    padding: 4px;
+    border-radius: 6px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.departamento {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    height: max-content;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.listaDep {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.hireInputs {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formHire {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 2px solid var(--base3);
+    border-top: 2px solid var(--base3);
+    padding-top: 15px;
+}
+
+
+.inputsHire {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    color: var(--sec3);
+    background-color: var(--base1);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.btnHire {
+    display: flex;
+    margin-bottom: 5px;
+    height: 20px;
+    color: var(--sec3);
+    background-color: var(--base2);
+    border: none;
+    border: 1px solid var(--sec3);
+    border-radius: 7px;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.funcioSemDep {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    height: max-content;
+    margin-top: 15px;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.nomeSemDep {
+    display: flex;
+    font-family: var(--font3);
+    font-size: medium;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--base3);
+    margin-bottom: 4px;
+}
+
+.semDep {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: var(--base1);
+    border: 1px solid var(--sec4);
+    border-radius: 7px;
+    font-family: var(--font3);
+    font-size: small;
+    box-shadow: 2px 2px 3px var(--base2);
+}
+
+.allUsers {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    height: max-content;
+    margin-top: 15px;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: var(--base1);
+    border: 1px solid var(--sec4);
+    border-radius: 7px;
+    font-family: var(--font3);
+    font-size: small;
+    box-shadow: 2px 2px 3px var(--base2);
+}
+
+.nomeFuncio {
+    display: flex;
+    font-family: var(--font3);
+    font-size: medium;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--base3);
+    margin-bottom: 4px;
+}
+
+.btnDemitir {
+    background-color: var(--sec4);
+    border: none;
+    border: 1px solid var(--base_princ);
+    color: var(--base_princ);
+    padding: 4px;
+    border-radius: 6px;
+    margin-top: 4px;
+    cursor: pointer;
+}
